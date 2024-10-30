@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ErrorText from './ErrorText';
-import Photo from './Photo';
+import Photo from './Components/Photo';
 import './App.css';
 import Header from './Components/Header';
 
@@ -24,14 +24,11 @@ function AppConnect() {
   }, [])
 
   return (
-    <div className='App'>
+    <div className=''>
       <Header />
-      <header>
-        <h1>Nasa Mars Images</h1>
-      </header>
 
-      <ErrorText error={error} />
       <Photo data={data}/>
+      <ErrorText error={error} />
     </div>
   )
 }
