@@ -1,9 +1,9 @@
 function ErrorText({error}) {
-    if(error) {
-        console.log(error.name )
+    if(error && error.name) {
+        console.log(error.name)
         return (
-            <div className="col">
-                <p className='text-red-500'> Something went wrong. Error: {error.message}</p>
+            <div className="container max-w-5xl mx-auto px-2 py-6">
+                <p className='font-opensans font-bold text-red-500'> Something went wrong. Error: {error.message}</p>
             </div>
         )
     }
