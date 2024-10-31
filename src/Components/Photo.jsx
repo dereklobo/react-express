@@ -1,9 +1,15 @@
+import ImageCard from "./ImageCard"
+import PhotoSkeleton from "./PhotoSkeleton"
 
-const Photo = () => {
+const Photo = ({data, isLoading}) => {
   return (
     <div className="container max-w-5xl mx-auto px-2 py-6">
-      <div className="grid md:grid-cols-5 gap-4">
+      <div className="grid md:grid-cols-3 gap-4">
           {/* // iterate over images  */}
+          { !isLoading && !data ? <PhotoSkeleton items={3} /> : data && data.map((photo, index) =>
+            <ImageCard photo={photo} key={index} />
+          )}
+          
       </div>
     </div>
   )
