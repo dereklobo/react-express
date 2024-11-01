@@ -7,6 +7,7 @@ import Header from './Components/Header';
 function AppConnect() {
 
   const [data, setData] = useState([])
+  const [filterData, setFilterData] = useState([])
   const [error, setError] = useState({})
   const [isLoading, setIsLoading] = useState(false)
 
@@ -31,9 +32,9 @@ function AppConnect() {
 
   return (
     <div className=''>
-      <Header />
+      <Header isLoading={isLoading} data={data} setFilterData={setFilterData} />
 
-      <Photo data={data} isLoading={isLoading}/>
+      <Photo data={filterData} isLoading={isLoading}/>
 
       <ErrorText error={error} />
     </div>
