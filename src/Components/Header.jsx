@@ -2,14 +2,19 @@ import { useState } from "react"
 
 const Header = ({data,setFilterData, isLoading}) => {
   const [inputValue, setInputValue] = useState('');
-  const filterPhotosById = (data) =>  data.filter((item) => item.id === parseInt(inputValue))
+  const filterPhotosByCameraIdOrName = (data) =>  data && data.length ? data.filter((item) => 
+    { 
+      return item.id.toString().includes(inputValue) 
+    } 
+  )
+      : [] 
   
   const handleInputChange = (e) => setInputValue(e.target.value)
   const handleSubmit = (e) => {
     e.preventDefault()
 
     if(inputValue!=='') {
-      setFilterData(filterPhotosById(data))
+      setFilterData(filterPhotosByCameraIdOrName(data))
     } else {
       setFilterData(data)
     }
