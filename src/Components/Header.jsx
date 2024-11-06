@@ -1,8 +1,8 @@
 import { useState } from "react"
 
-const Header = ({data,setFilterData, isLoading}) => {
+const Header = ({data, setFilterData, isLoading, setIsLoading}) => {
   const [inputValue, setInputValue] = useState('');
-  const filterPhotosByCameraIdOrName = (data) =>  data && data.length ? data.filter((item) => 
+  const filterPhotosById = (data) =>  data && data.length ? data.filter((item) => 
     { 
       return item.id.toString().includes(inputValue) 
     } 
@@ -11,14 +11,21 @@ const Header = ({data,setFilterData, isLoading}) => {
   
   const handleInputChange = (e) => setInputValue(e.target.value)
   const handleSubmit = (e) => {
+    console.log('here')
     e.preventDefault()
 
     if(inputValue!=='') {
-      setFilterData(filterPhotosByCameraIdOrName(data))
+      setFilterData(filterPhotosById(data))
     } else {
       setFilterData(data)
     }
   }
+
+  //  // to load data on page load
+  //  if(data && data.length > 0 && filterPhotosById(data).length === 0) {
+  //   console.log('in the lheader filer photoby id');
+  //   setFilterData(data)
+  // }
 
   return (
     <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
@@ -34,7 +41,7 @@ const Header = ({data,setFilterData, isLoading}) => {
         <form className="relative my-8 max-w-md" onSubmit={handleSubmit}>
           <input onInput={handleInputChange} value={inputValue} className="indent-2 py-4 pr-[4.5rem] rounded-sm bg-gray-50
           w-full md:max-w-md focus:ring-primary outline-none focus:ring-2
-          " placeholder="Search camera id, camera name" type="text"/>
+          " placeholder="Search camera id" type="text"/>
 
           <button type="submit" className="absolute bottom-3.5 right-2.5 bg-primary text-white
           p-1 rounded-sm text-sm">

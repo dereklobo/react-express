@@ -12,19 +12,21 @@ function AppConnect() {
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
+    setIsLoading(true);
     const fetchData = async() => {
-      const result = await fetch("http://localhost:9000/nasa")
-                           .then(response => {
-                              setIsLoading(true)
-                              return response.json()
-                            })
-                           // error handler
-                          .catch((error) => {
-                              setError(error)
-                          })
-                          .finally(() => setIsLoading(false))
+      await fetch("http://localhost:9000/nasa")
+                .then(response => {
+                  return response.json()
+                })
+                .then( data => {
+                  setData(data)
+                  setIsLoading(false)
+                })
+                // error handler
+              .catch((error) => {
+                  setError(error)
+              })
                           
-        setData(result)
     }
 
     fetchData()
@@ -32,9 +34,9 @@ function AppConnect() {
 
   return (
     <div className=''>
-      <Header isLoading={isLoading} data={data} setFilterData={setFilterData} />
+      <Header isLoading={isLoading} data={data} setFilterData={setFilterData} setIsLoading={setIsLoading} />
 
-      <Photo data={filterData} isLoading={isLoading}/>
+      <Photo data={data} filterData={filterData} isLoading={isLoading}/>
 
       <ErrorText error={error} />
     </div>
