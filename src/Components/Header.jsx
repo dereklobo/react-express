@@ -1,17 +1,11 @@
 import { useState } from "react"
 
-const Header = ({data, setFilterData, isLoading, setIsLoading}) => {
+const Header = ({data, setFilterData }) => {
   const [inputValue, setInputValue] = useState('');
-  const filterPhotosById = (data) =>  data && data.length ? data.filter((item) => 
-    { 
-      return item.id.toString().includes(inputValue) 
-    } 
-  )
-      : [] 
+  const filterPhotosById = (data) =>  data && data.length ? data.filter((item) =>  item.id.toString().includes(inputValue)): [] 
   
   const handleInputChange = (e) => setInputValue(e.target.value)
   const handleSubmit = (e) => {
-    console.log('here')
     e.preventDefault()
 
     if(inputValue!=='') {
@@ -39,11 +33,11 @@ const Header = ({data, setFilterData, isLoading, setIsLoading}) => {
 
         {/* {Form} */}
         <form className="relative my-8 max-w-md" onSubmit={handleSubmit}>
-          <input onInput={handleInputChange} value={inputValue} className="indent-2 py-4 pr-[4.5rem] rounded-sm bg-gray-50
+          <input onInput={handleInputChange} aria-label="camera-id-input" value={inputValue} className="indent-2 py-4 pr-[4.5rem] rounded-sm bg-gray-50
           w-full md:max-w-md focus:ring-primary outline-none focus:ring-2
           " placeholder="Search camera id" type="text"/>
 
-          <button type="submit" className="absolute bottom-3.5 right-2.5 bg-primary text-white
+          <button type="submit" name="searchButton" aria-label='search' className="absolute bottom-3.5 right-2.5 bg-primary text-white
           p-1 rounded-sm text-sm">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />

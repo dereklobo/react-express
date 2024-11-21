@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders learn react link 1`] = `
+exports[`Header component renders Header text in Header component 1`] = `
 <div>
   <div
     class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
@@ -38,13 +38,160 @@ exports[`renders learn react link 1`] = `
           class="relative my-8 max-w-md"
         >
           <input
+            aria-label="camera-id-input"
             class="indent-2 py-4 pr-[4.5rem] rounded-sm bg-gray-50 w-full md:max-w-md focus:ring-primary outline-none focus:ring-2 "
             placeholder="Search camera id"
             type="text"
             value=""
           />
           <button
+            aria-label="search"
             class="absolute bottom-3.5 right-2.5 bg-primary text-white p-1 rounded-sm text-sm"
+            name="searchButton"
+            type="submit"
+          >
+            <svg
+              class="size-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header component search bar: input has value 1`] = `
+<div>
+  <div
+    class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+  >
+    <div
+      class="container mx-auto max-w-5xl px-3 py-6"
+    >
+      <p
+        class="block font-bold text-xl font-opensans"
+      >
+        Nasa 
+        <span
+          class="text-primary"
+        >
+          Images
+        </span>
+      </p>
+      <h1>
+        Header
+      </h1>
+      <div
+        class="my-14"
+      >
+        <h2
+          class="font-bold text-xl max-w-xs mb-2"
+        >
+          Mars Rover Photos
+        </h2>
+        <p
+          class="font-light opacity-80 hidden md:inline-block"
+        >
+          Photos captured by rover cameras
+        </p>
+        <form
+          class="relative my-8 max-w-md"
+        >
+          <input
+            aria-label="camera-id-input"
+            class="indent-2 py-4 pr-[4.5rem] rounded-sm bg-gray-50 w-full md:max-w-md focus:ring-primary outline-none focus:ring-2 "
+            placeholder="Search camera id"
+            type="text"
+            value="2096"
+          />
+          <button
+            aria-label="search"
+            class="absolute bottom-3.5 right-2.5 bg-primary text-white p-1 rounded-sm text-sm"
+            name="searchButton"
+            type="submit"
+          >
+            <svg
+              class="size-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header component search bar: input is empty 1`] = `
+<div>
+  <div
+    class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+  >
+    <div
+      class="container mx-auto max-w-5xl px-3 py-6"
+    >
+      <p
+        class="block font-bold text-xl font-opensans"
+      >
+        Nasa 
+        <span
+          class="text-primary"
+        >
+          Images
+        </span>
+      </p>
+      <h1>
+        Header
+      </h1>
+      <div
+        class="my-14"
+      >
+        <h2
+          class="font-bold text-xl max-w-xs mb-2"
+        >
+          Mars Rover Photos
+        </h2>
+        <p
+          class="font-light opacity-80 hidden md:inline-block"
+        >
+          Photos captured by rover cameras
+        </p>
+        <form
+          class="relative my-8 max-w-md"
+        >
+          <input
+            aria-label="camera-id-input"
+            class="indent-2 py-4 pr-[4.5rem] rounded-sm bg-gray-50 w-full md:max-w-md focus:ring-primary outline-none focus:ring-2 "
+            placeholder="Search camera id"
+            type="text"
+            value=""
+          />
+          <button
+            aria-label="search"
+            class="absolute bottom-3.5 right-2.5 bg-primary text-white p-1 rounded-sm text-sm"
+            name="searchButton"
             type="submit"
           >
             <svg
