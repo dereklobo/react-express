@@ -1,4 +1,4 @@
-import { server } from './mocks/node'
+import { server } from './mocks/browser'
 
 beforeAll(() => {
   // Enable API mocking before all the tests.
