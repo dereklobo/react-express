@@ -3,7 +3,14 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+
+import { TextEncoder, TextDecoder } from 'util'
+global.TextEncoder = TextEncoder
+// @ts-expect-error
+global.TextDecoder = TextDecoder
 // jest.config.js
 module.exports = {
     testEnvironment: 'jest-fixed-jsdom',
+    setupFiles: ['/src/setup.jest.js'],
+    transformIgnorePatterns: ["/node_modules/(?!(@bundled-es-modules)/)"],
   }

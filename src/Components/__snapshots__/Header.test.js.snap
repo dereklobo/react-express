@@ -24,16 +24,18 @@ exports[`Header component renders Header text in Header component 1`] = `
       <div
         class="my-14"
       >
-        <h2
-          class="font-bold text-xl max-w-xs mb-2"
-        >
-          Mars Rover Photos
-        </h2>
-        <p
-          class="font-light opacity-80 hidden md:inline-block"
-        >
-          Photos captured by rover cameras
-        </p>
+        <div>
+          <h2
+            class="font-bold text-xl max-w-xs mb-2"
+          >
+            Mars Rover Photos
+          </h2>
+          <p
+            class="font-light opacity-80 hidden md:inline-block"
+          >
+            Photos captured by rover cameras
+          </p>
+        </div>
         <form
           class="relative my-8 max-w-md"
         >
@@ -96,16 +98,18 @@ exports[`Header component search bar: input has value 1`] = `
       <div
         class="my-14"
       >
-        <h2
-          class="font-bold text-xl max-w-xs mb-2"
-        >
-          Mars Rover Photos
-        </h2>
-        <p
-          class="font-light opacity-80 hidden md:inline-block"
-        >
-          Photos captured by rover cameras
-        </p>
+        <div>
+          <h2
+            class="font-bold text-xl max-w-xs mb-2"
+          >
+            Mars Rover Photos
+          </h2>
+          <p
+            class="font-light opacity-80 hidden md:inline-block"
+          >
+            Photos captured by rover cameras
+          </p>
+        </div>
         <form
           class="relative my-8 max-w-md"
         >
@@ -168,16 +172,18 @@ exports[`Header component search bar: input is empty 1`] = `
       <div
         class="my-14"
       >
-        <h2
-          class="font-bold text-xl max-w-xs mb-2"
-        >
-          Mars Rover Photos
-        </h2>
-        <p
-          class="font-light opacity-80 hidden md:inline-block"
-        >
-          Photos captured by rover cameras
-        </p>
+        <div>
+          <h2
+            class="font-bold text-xl max-w-xs mb-2"
+          >
+            Mars Rover Photos
+          </h2>
+          <p
+            class="font-light opacity-80 hidden md:inline-block"
+          >
+            Photos captured by rover cameras
+          </p>
+        </div>
         <form
           class="relative my-8 max-w-md"
         >

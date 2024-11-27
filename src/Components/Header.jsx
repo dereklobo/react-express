@@ -28,8 +28,10 @@ const Header = ({data, setFilterData }) => {
       <p className="block font-bold text-xl font-opensans">Nasa <span className="text-primary">Images</span></p>
       <h1>Header</h1>
       <div className="my-14">
-        <h2 className="font-bold text-xl max-w-xs mb-2">Mars Rover Photos</h2>
-        <p className="font-light opacity-80 hidden md:inline-block">Photos captured by rover cameras</p>
+        <div>
+          <h2 className="font-bold text-xl max-w-xs mb-2">Mars Rover Photos</h2>
+          <p className="font-light opacity-80 hidden md:inline-block">Photos captured by rover cameras</p>
+        </div>
 
         {/* {Form} */}
         <form className="relative my-8 max-w-md" onSubmit={handleSubmit}>

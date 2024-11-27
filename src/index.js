@@ -10,14 +10,14 @@ async function enableMocking() {
   //   return
   // }
  
-  const { worker } = await import('./mocks/browser')
+  // const { worker } = await import('./mocks/browser')
  
   // `worker.start()` returns a Promise that resolves
   // once the Service Worker is up and ready to intercept requests.
-  return worker.start()
+  // return worker.start()
 }
  
-enableMocking().then(() => {
+// enableMocking().then(() => {
   // ReactDOM.render(<App />, rootElement)
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
@@ -25,7 +25,7 @@ enableMocking().then(() => {
       <AppConnect></AppConnect>
     </React.StrictMode>
   );
-})
+// })
 
 
 
