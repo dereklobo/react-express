@@ -5,5 +5,5 @@ module.exports = {
     // from the above list
     preset: 'ts-jest/presets/js-with-babel',
     setupFiles: ['<rootDir>/setup.jest.js'],
-    transformIgnorePatterns: [`/node_modules/(?!${esModules})`],
+    transformIgnorePatterns: ["/node_modules/(?!(@bundled-es-modules)/)"],
   }

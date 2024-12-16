@@ -41,6 +41,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.25.9",
+    "eslint": "^8.57.1",
     "msw": "^2.6.5"
   },
   "msw": {

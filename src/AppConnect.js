@@ -10,7 +10,7 @@ function AppConnect() {
   const [filterData, setFilterData] = useState([])
   const [error, setError] = useState({})
   const [isLoading, setIsLoading] = useState(false)
-
+  
   useEffect(() => {
     setIsLoading(true);
     const fetchData = async() => {
